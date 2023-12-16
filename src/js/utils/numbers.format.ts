@@ -1,10 +1,10 @@
-export function phoneFormat(phone) {
+export function phoneFormat(phone: string): String {
 	const pattern = /^(\+7|8)?(\d*)/g;
 	phone = phone.replace(/\D*/g, "");
 	return phone.replace(pattern, "+7$2");
 }
 
-export function declOfNums(value, words = ['автомобиль', 'автомобиля', 'автомобилей']){  
+export function declOfNums(value: number, words = ['автомобиль', 'автомобиля', 'автомобилей']): String{  
     value = Math.abs(value) % 100; 
     var num = value % 10;
     if(value > 10 && value < 20) return words[2]; 
